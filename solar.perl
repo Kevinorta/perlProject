@@ -1,9 +1,7 @@
-open(SOLAR, "solar.txt");
-
-while ($line = <SOLAR>) { # Loop through each line
-    push(@solar, $line);
+while (<>) { # Loop through each line
+    push(@solar, $_);
 }
-close(SOLAR);
+
 print("\n1. All records without a discoverer.\n\n");
 foreach (@solar){
     @tmpArray = split(/ /, $_);
